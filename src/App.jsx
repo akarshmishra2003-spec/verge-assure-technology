@@ -41,6 +41,16 @@ const SOLUTIONS=[
   {title:"Technology Solutions for Modern Insurers",items:["Cloud-native insurance platforms","Microservices architecture","Event-driven processing pipelines","Low-code workflow builders","Self-service portals for policyholders","Mobile-first field operations"]},
 ];
 
+const INDUSTRIES=[
+  {name:"Insurance",desc:"Motor, health, property, and life insurance carriers",icon:"🏛️"},
+  {name:"Reinsurance",desc:"Treaty and facultative reinsurance operations",icon:"🔄"},
+  {name:"BFSI",desc:"Banking, financial services, and fintech platforms",icon:"🏦"},
+  {name:"Enterprise Operations",desc:"Large-scale corporate process automation",icon:"⚙️"},
+  {name:"Healthcare",desc:"Health claims, TPA, and provider network management",icon:"🏥"},
+  {name:"Logistics",desc:"Supply chain, fleet, and operations management",icon:"🚚"},
+];
+
+
 
 const KPIS=[
   {v:"98.5%",l:"AI Accuracy Rate"},
@@ -160,7 +170,7 @@ export default function App(){
 {[
 {h:"Company",l:["About Us","Services","Solutions","Industries","Insights","Careers"]},
 {h:"Solutions",l:["Claims Automation","AI & Analytics","Workflow Systems","API Integrations","Document Processing"]},
-{h:"Contact",l:["+91 98765 43210","Delhi, India","LinkedIn →"]},
+{h:"Contact",l:["contact@vergeassure.com","+91 98765 43210","Lucknow, India","LinkedIn →"]},
 ].map((c,i)=><div key={i}>
 <h4 style={{fontSize:11,textTransform:"uppercase",letterSpacing:1.5,color:"rgba(255,255,255,.25)",marginBottom:14,fontWeight:600}}>{c.h}</h4>
 {c.l.map((t,j)=><div key={j} style={{fontSize:13,color:"rgba(255,255,255,.45)",marginBottom:8,cursor:"pointer",transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,.45)"}>{t}</div>)}
@@ -271,23 +281,6 @@ We help insurers, brokers, TPAs, and enterprises streamline operations, automate
 </div>
 </section>
 
-{/* CASE STUDIES */}
-<section style={{padding:"100px 0",background:"rgba(255,255,255,.01)"}}>
-<div className="ctr">
-<R><Lbl>Case Studies</Lbl>
-<h2 style={h2s}>Proven Impact Across Insurance Enterprises</h2></R>
-<div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(320px,1fr))",gap:20,marginTop:40}}>
-{CASE_STUDIES.map((c,i)=><R key={i} d={i*.08}>
-<div className="card-e" style={{padding:32}}>
-<div style={{fontSize:11,fontWeight:600,color:"rgba(255,255,255,.3)",textTransform:"uppercase",letterSpacing:1,marginBottom:16}}>{c.client}</div>
-<div style={{fontSize:42,fontWeight:800,letterSpacing:"-2px",marginBottom:4}} className="grad-text">{c.metric}</div>
-<div style={{fontSize:14,fontWeight:600,color:"#fff",marginBottom:12}}>{c.label}</div>
-<p style={{fontSize:13,color:"rgba(255,255,255,.4)",lineHeight:1.65}}>{c.desc}</p>
-</div></R>)}
-</div>
-</div>
-</section>
-
 {/* PROCESS */}
 <section style={{padding:"100px 0"}}>
 <div className="ctr">
@@ -306,24 +299,6 @@ We help insurers, brokers, TPAs, and enterprises streamline operations, automate
 </div>
 </section>
 
-{/* TESTIMONIALS */}
-<section style={{padding:"100px 0",background:"linear-gradient(180deg,rgba(16,185,129,.03),transparent)"}}>
-<div className="ctr">
-<R><Lbl>Testimonials</Lbl>
-<h2 style={h2s}>What Our Clients Say</h2></R>
-<div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(320px,1fr))",gap:20,marginTop:40}}>
-{TESTIMONIALS.map((t,i)=><R key={i} d={i*.08}>
-<div className="card-e" style={{padding:32}}>
-<div style={{fontSize:24,color:"#10b981",marginBottom:16}}>"</div>
-<p style={{fontSize:14,color:"rgba(255,255,255,.55)",lineHeight:1.7,marginBottom:20,fontStyle:"italic"}}>{t.quote}</p>
-<div style={{borderTop:"1px solid rgba(255,255,255,.06)",paddingTop:16}}>
-<div style={{fontSize:14,fontWeight:600,color:"#fff"}}>{t.name}</div>
-<div style={{fontSize:12,color:"rgba(255,255,255,.3)",marginTop:2}}>{t.role}</div>
-</div>
-</div></R>)}
-</div>
-</div>
-</section>
 
 {/* CTA BANNER */}
 <section style={{padding:"80px 0"}}>
@@ -471,13 +446,14 @@ return(<section style={{padding:"140px 0 100px"}}>
 <R d={.1}><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:48}} className="contact-grid">
 <div style={{display:"flex",flexDirection:"column",gap:14}}>
 <input className="inp" placeholder="Full Name" value={form.n} onChange={u("n")}/>
+<input className="inp" placeholder="Work Email" type="email" value={form.e} onChange={u("e")}/>
 <input className="inp" placeholder="Company Name" value={form.c} onChange={u("c")}/>
 <input className="inp" placeholder="Phone Number" value={form.p} onChange={u("p")}/>
 <textarea className="inp" placeholder="Tell us about your project..." value={form.m} onChange={u("m")} style={{minHeight:120,resize:"vertical"}}/>
 <button className="btn-p" style={{justifyContent:"center"}}>Submit Inquiry <Arr/></button>
 </div>
 <div style={{display:"flex",flexDirection:"column",gap:20}}>
-{[["📞","Phone","+91 98765 43210"],["📍","Location","Delhi, Uttar Pradesh, India"],].map(([ic,lb,vl],i)=><div key={i} style={{display:"flex",gap:14,alignItems:"flex-start"}}>
+{[["✉️","Email","contact@vergeassure.com"],["📞","Phone","+91 98765 43210"],["📍","Location","Lucknow, Uttar Pradesh, India"],["💼","LinkedIn","linkedin.com/company/vergeassure"]].map(([ic,lb,vl],i)=><div key={i} style={{display:"flex",gap:14,alignItems:"flex-start"}}>
 <div style={{width:40,height:40,borderRadius:10,background:"rgba(16,185,129,.08)",border:"1px solid rgba(16,185,129,.12)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16,flexShrink:0}}>{ic}</div>
 <div><div style={{fontSize:11,color:"rgba(255,255,255,.3)",fontWeight:600,textTransform:"uppercase",letterSpacing:.5}}>{lb}</div><div style={{fontSize:14,color:"rgba(255,255,255,.7)",marginTop:3}}>{vl}</div></div>
 </div>)}
