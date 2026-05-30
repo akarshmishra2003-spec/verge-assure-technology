@@ -52,15 +52,6 @@ const INDUSTRIES=[
 
 
 
-const KPIS=[
-  {v:"98.5%",l:"AI Accuracy Rate"},
-  {v:"60%",l:"Faster Claims"},
-  {v:"40%",l:"Cost Reduction"},
-  {v:"3.2M+",l:"Documents Processed"},
-  {v:"99.9%",l:"Platform Uptime"},
-  {v:"150+",l:"Enterprise Deployments"},
-];
-
 const INSIGHTS=[
   {tag:"AI & Insurance",title:"The Future of AI in Insurance Claims Processing",date:"May 2026",read:"8 min read"},
   {tag:"Digital Transformation",title:"Why Legacy Insurance Systems Are Costing You Millions",date:"Apr 2026",read:"6 min read"},
@@ -170,7 +161,7 @@ export default function App(){
 {[
 {h:"Company",l:["About Us","Services","Solutions","Industries","Insights","Careers"]},
 {h:"Solutions",l:["Claims Automation","AI & Analytics","Workflow Systems","API Integrations","Document Processing"]},
-{h:"Contact",l:["contact@vergeassure.com","+91 98765 43210","Lucknow, India","LinkedIn →"]},
+{h:"Contact",l:["contact@vergeassure.com","+91 98765 43210","Delhi, India","LinkedIn →"]},
 ].map((c,i)=><div key={i}>
 <h4 style={{fontSize:11,textTransform:"uppercase",letterSpacing:1.5,color:"rgba(255,255,255,.25)",marginBottom:14,fontWeight:600}}>{c.h}</h4>
 {c.l.map((t,j)=><div key={j} style={{fontSize:13,color:"rgba(255,255,255,.45)",marginBottom:8,cursor:"pointer",transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,.45)"}>{t}</div>)}
@@ -216,13 +207,6 @@ We help insurers, brokers, TPAs, and enterprises streamline operations, automate
 <button className="btn-s" onClick={()=>nav("Solutions")}>Explore Solutions</button>
 </div></R>
 
-{/* KPI Strip */}
-<R d={.35}><div style={{marginTop:64,display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))",gap:16}}>
-{KPIS.map((k,i)=><div key={i} style={{textAlign:"center",padding:"20px 8px",borderRadius:12,background:"rgba(255,255,255,.03)",border:"1px solid rgba(255,255,255,.05)"}}>
-<div style={{fontSize:28,fontWeight:800,letterSpacing:"-1px",marginBottom:4}} className="grad-text">{k.v}</div>
-<div style={{fontSize:12,color:"rgba(255,255,255,.35)",fontWeight:500}}>{k.l}</div>
-</div>)}
-</div></R>
 </div>
 </section>
 
@@ -453,7 +437,7 @@ return(<section style={{padding:"140px 0 100px"}}>
 <button className="btn-p" style={{justifyContent:"center"}}>Submit Inquiry <Arr/></button>
 </div>
 <div style={{display:"flex",flexDirection:"column",gap:20}}>
-{[["✉️","Email","contact@vergeassure.com"],["📞","Phone","+91 98765 43210"],["📍","Location","Delhi India"],["💼","LinkedIn","linkedin.com/company/vergeassure"]].map(([ic,lb,vl],i)=><div key={i} style={{display:"flex",gap:14,alignItems:"flex-start"}}>
+{[["✉️","Email","contact@vergeassure.com"],["📞","Phone","+91 98765 43210"],["📍","Location","Delhi, India"],["💼","LinkedIn","linkedin.com/company/vergeassure"]].map(([ic,lb,vl],i)=><div key={i} style={{display:"flex",gap:14,alignItems:"flex-start"}}>
 <div style={{width:40,height:40,borderRadius:10,background:"rgba(16,185,129,.08)",border:"1px solid rgba(16,185,129,.12)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16,flexShrink:0}}>{ic}</div>
 <div><div style={{fontSize:11,color:"rgba(255,255,255,.3)",fontWeight:600,textTransform:"uppercase",letterSpacing:.5}}>{lb}</div><div style={{fontSize:14,color:"rgba(255,255,255,.7)",marginTop:3}}>{vl}</div></div>
 </div>)}
