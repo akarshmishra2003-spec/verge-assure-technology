@@ -322,12 +322,6 @@ Founded by Yash Chandra and Ansh Srivastava, our mission is to eliminate operati
 </div></R>)}
 </div>
 
-<R d={.2}><div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:16}}>
-{[{v:"2024",l:"Founded"},{v:"50+",l:"Team Members"},{v:"150+",l:"Enterprise Clients"},{v:"6",l:"Industries Served"},{v:"99.9%",l:"Platform Uptime"}].map((s,i)=><div key={i} style={{textAlign:"center",padding:24,borderRadius:14,background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.05)"}}>
-<div style={{fontSize:28,fontWeight:800,color:"#fff",letterSpacing:"-1px"}}>{s.v}</div>
-<div style={{fontSize:12,color:"rgba(255,255,255,.35)",marginTop:4}}>{s.l}</div>
-</div>)}
-</div></R>
 </div>
 </section>);}
 
