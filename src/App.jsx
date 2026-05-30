@@ -41,26 +41,6 @@ const SOLUTIONS=[
   {title:"Technology Solutions for Modern Insurers",items:["Cloud-native insurance platforms","Microservices architecture","Event-driven processing pipelines","Low-code workflow builders","Self-service portals for policyholders","Mobile-first field operations"]},
 ];
 
-const INDUSTRIES=[
-  {name:"Insurance",desc:"Motor, health, property, and life insurance carriers",icon:"🏛️"},
-  {name:"Reinsurance",desc:"Treaty and facultative reinsurance operations",icon:"🔄"},
-  {name:"BFSI",desc:"Banking, financial services, and fintech platforms",icon:"🏦"},
-  {name:"Enterprise Operations",desc:"Large-scale corporate process automation",icon:"⚙️"},
-  {name:"Healthcare",desc:"Health claims, TPA, and provider network management",icon:"🏥"},
-  {name:"Logistics",desc:"Supply chain, fleet, and operations management",icon:"🚚"},
-];
-
-const CASE_STUDIES=[
-  {client:"Leading Motor Insurer",metric:"60%",label:"Reduction in Claims TAT",desc:"Implemented AI-powered claims triage that automatically routes and prioritizes incoming claims, reducing average turnaround from 15 days to 6 days."},
-  {client:"National TPA Network",metric:"3.2M+",label:"Documents Processed Annually",desc:"Deployed intelligent document processing that extracts, validates, and routes policy documents with 98.5% accuracy."},
-  {client:"Enterprise Insurance Group",metric:"40%",label:"Operational Cost Savings",desc:"End-to-end workflow digitization across 12 branches, eliminating paper-based processes and manual data entry."},
-];
-
-const TESTIMONIALS=[
-  {quote:"Verge Assure Technology transformed our claims operation. What used to take weeks now takes days. Their AI solutions are genuinely game-changing.",name:"Rajesh Kumar",role:"CTO, National Insurance Corp"},
-  {quote:"The team's deep understanding of insurance operations sets them apart. They don't just build software — they solve real business problems.",name:"Priya Sharma",role:"VP Operations, InsureFirst"},
-  {quote:"Working with Verge Assure Technology felt like having an extension of our own team. Their enterprise solutions are robust, scalable, and beautifully designed.",name:"Amit Patel",role:"Head of Digital, SecureLife Insurance"},
-];
 
 const KPIS=[
   {v:"98.5%",l:"AI Accuracy Rate"},
@@ -180,7 +160,7 @@ export default function App(){
 {[
 {h:"Company",l:["About Us","Services","Solutions","Industries","Insights","Careers"]},
 {h:"Solutions",l:["Claims Automation","AI & Analytics","Workflow Systems","API Integrations","Document Processing"]},
-{h:"Contact",l:["contact@vergeassure.com","+91 98765 43210","Lucknow, India","LinkedIn →"]},
+{h:"Contact",l:["+91 98765 43210","Delhi, India","LinkedIn →"]},
 ].map((c,i)=><div key={i}>
 <h4 style={{fontSize:11,textTransform:"uppercase",letterSpacing:1.5,color:"rgba(255,255,255,.25)",marginBottom:14,fontWeight:600}}>{c.h}</h4>
 {c.l.map((t,j)=><div key={j} style={{fontSize:13,color:"rgba(255,255,255,.45)",marginBottom:8,cursor:"pointer",transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,.45)"}>{t}</div>)}
@@ -491,14 +471,13 @@ return(<section style={{padding:"140px 0 100px"}}>
 <R d={.1}><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:48}} className="contact-grid">
 <div style={{display:"flex",flexDirection:"column",gap:14}}>
 <input className="inp" placeholder="Full Name" value={form.n} onChange={u("n")}/>
-<input className="inp" placeholder="Work Email" type="email" value={form.e} onChange={u("e")}/>
 <input className="inp" placeholder="Company Name" value={form.c} onChange={u("c")}/>
 <input className="inp" placeholder="Phone Number" value={form.p} onChange={u("p")}/>
 <textarea className="inp" placeholder="Tell us about your project..." value={form.m} onChange={u("m")} style={{minHeight:120,resize:"vertical"}}/>
 <button className="btn-p" style={{justifyContent:"center"}}>Submit Inquiry <Arr/></button>
 </div>
 <div style={{display:"flex",flexDirection:"column",gap:20}}>
-{[["✉️","Email","contact@vergeassure.com"],["📞","Phone","+91 98765 43210"],["📍","Location","Lucknow, Uttar Pradesh, India"],["💼","LinkedIn","linkedin.com/company/vergeassure"]].map(([ic,lb,vl],i)=><div key={i} style={{display:"flex",gap:14,alignItems:"flex-start"}}>
+{[["📞","Phone","+91 98765 43210"],["📍","Location","Delhi, Uttar Pradesh, India"],].map(([ic,lb,vl],i)=><div key={i} style={{display:"flex",gap:14,alignItems:"flex-start"}}>
 <div style={{width:40,height:40,borderRadius:10,background:"rgba(16,185,129,.08)",border:"1px solid rgba(16,185,129,.12)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16,flexShrink:0}}>{ic}</div>
 <div><div style={{fontSize:11,color:"rgba(255,255,255,.3)",fontWeight:600,textTransform:"uppercase",letterSpacing:.5}}>{lb}</div><div style={{fontSize:14,color:"rgba(255,255,255,.7)",marginTop:3}}>{vl}</div></div>
 </div>)}
