@@ -453,7 +453,7 @@ return(<section style={{padding:"140px 0 100px"}}>
 <button className="btn-p" style={{justifyContent:"center"}}>Submit Inquiry <Arr/></button>
 </div>
 <div style={{display:"flex",flexDirection:"column",gap:20}}>
-{[["✉️","Email","contact@vergeassure.com"],["📞","Phone","+91 98765 43210"],["📍","Location","Lucknow, Uttar Pradesh, India"],["💼","LinkedIn","linkedin.com/company/vergeassure"]].map(([ic,lb,vl],i)=><div key={i} style={{display:"flex",gap:14,alignItems:"flex-start"}}>
+{[["✉️","Email","contact@vergeassure.com"],["📞","Phone","+91 98765 43210"],["📍","Location","Delhi India"],["💼","LinkedIn","linkedin.com/company/vergeassure"]].map(([ic,lb,vl],i)=><div key={i} style={{display:"flex",gap:14,alignItems:"flex-start"}}>
 <div style={{width:40,height:40,borderRadius:10,background:"rgba(16,185,129,.08)",border:"1px solid rgba(16,185,129,.12)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16,flexShrink:0}}>{ic}</div>
 <div><div style={{fontSize:11,color:"rgba(255,255,255,.3)",fontWeight:600,textTransform:"uppercase",letterSpacing:.5}}>{lb}</div><div style={{fontSize:14,color:"rgba(255,255,255,.7)",marginTop:3}}>{vl}</div></div>
 </div>)}
